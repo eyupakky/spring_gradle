@@ -9,23 +9,25 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@EqualsAndHashCode(of = {"id"})
 public class KisiDto {
 
-    public Long getId() {
-        return id;
+
+
+    private Long id;
+
+    @NotNull
+    private String adi;
+
+    private String soyadi;
+
+    private List<String> adresler;
+
+    public List<String> getAdresler() {
+        return adresler;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getAdi() {
-        return adi;
-    }
-
-    public void setAdi(String adi) {
-        this.adi = adi;
+    public void setAdresler(List<String> adresler) {
+        this.adresler = adresler;
     }
 
     public String getSoyadi() {
@@ -36,20 +38,18 @@ public class KisiDto {
         this.soyadi = soyadi;
     }
 
-    public List<String> getAdresler() {
-        return adresler;
+    public String getAdi() {
+        return adi;
     }
 
-    public void setAdresler(List<String> adresler) {
-        this.adresler = adresler;
+    public void setAdi(String adi) {
+        this.adi = adi;
+    }
+    public Long getId() {
+        return id;
     }
 
-    private Long id;
-
-    @NotNull
-    private String adi;
-
-    private String soyadi;
-
-    private List<String> adresler;
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

@@ -9,4 +9,7 @@
     <include file="./db/kisi_table.sql"/>
     <include file="./db/kisi_adres_table.sql"/>
     <include file="./db/new_table.sql"/>
+    <include file="./db/users_table.sql"/>
+    <include file="./db/users_role.sql"/>
+    <include file="./db/station_and_bus_and_route.sql"/>
 </databaseChangeLog>

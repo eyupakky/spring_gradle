@@ -16,10 +16,12 @@ public class ServiceAspect {
     @Before("execution(* org.smart.springboot.controller.*.*(..))")
     public void metodBefore(JoinPoint joinPoint) {
         logger.info("metodBefore: " + joinPoint.getArgs());
+        System.out.println(joinPoint.getSignature());
     }
 
     @After("execution(* org.smart.springboot.service.*.*(..))")
     public void metodAfter(JoinPoint joinPoint) {
-        logger.info("metodAfter  : " + joinPoint.getArgs()[0]);
+        logger.info("metodAfter  : " + joinPoint.getSignature());
+
     }
 }
