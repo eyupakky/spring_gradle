@@ -22,6 +22,5 @@ public class ServiceAspect {
     @After("execution(* org.smart.springboot.service.*.*(..))")
     public void metodAfter(JoinPoint joinPoint) {
         logger.info("metodAfter  : " + joinPoint.getSignature());
-
     }
 }
